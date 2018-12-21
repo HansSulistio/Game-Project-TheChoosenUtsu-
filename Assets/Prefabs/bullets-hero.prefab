@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212866962565216646}
   - component: {fileID: 114515117544363380}
   - component: {fileID: 61409894148897630}
+  - component: {fileID: 114028637983168992}
   m_Layer: 0
   m_Name: bullets-hero
   m_TagString: playerBullet
@@ -67,6 +68,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0216904, y: 1.0855064}
   m_EdgeRadius: 0
+--- !u!114 &114028637983168992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1621128129015938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7ba8de34393c1448eb4bf744a39fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114515117544363380
 MonoBehaviour:
   m_ObjectHideFlags: 1

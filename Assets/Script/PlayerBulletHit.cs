@@ -6,7 +6,6 @@ public class PlayerBulletHit : MonoBehaviour {
     
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(1);
         if(col.gameObject.tag == "playerBullet")
         {
             GameObject go = col.gameObject;

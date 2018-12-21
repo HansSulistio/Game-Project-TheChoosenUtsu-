@@ -11,11 +11,12 @@ public class PlayerBullet : MonoBehaviour {
     
     // Use this for initialization
     private void Start () {
-		Invoke("DestroyBullet",lifetime);
+		//Invoke("DestroyBullet",lifetime);
 	}
 	
 	// Update is called once per frame
 	private void Update () {
+       
         transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 

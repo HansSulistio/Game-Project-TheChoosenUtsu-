@@ -213,6 +213,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &311214251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 311214252}
+  m_Layer: 0
+  m_Name: shot point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &311214252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 311214251}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.21, y: -0.19, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1371009820}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &343393017
 GameObject:
   m_ObjectHideFlags: 0
@@ -5471,6 +5499,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1750162358809218, guid: 404a8ea8c48a58444a4e616b34d75b32,
     type: 2}
   m_PrefabInternal: {fileID: 1353551348}
+--- !u!4 &1371009820 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4590872861981526, guid: 404a8ea8c48a58444a4e616b34d75b32,
+    type: 2}
+  m_PrefabInternal: {fileID: 1353551348}
 --- !u!114 &1371009821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5515,6 +5548,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1371009824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1371009816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f5dba7b7413d4408e72023249933c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a:
+  - {fileID: 1141260404782896, guid: 9db1a7e335efed54ba8dbbca78d2a536, type: 2}
+  - {fileID: 1141260404782896, guid: 9db1a7e335efed54ba8dbbca78d2a536, type: 2}
+  - {fileID: 1141260404782896, guid: 9db1a7e335efed54ba8dbbca78d2a536, type: 2}
+  shotpoint: {fileID: 311214252}
+  startTimeBtwShots: 1
 --- !u!1 &1416420454
 GameObject:
   m_ObjectHideFlags: 0

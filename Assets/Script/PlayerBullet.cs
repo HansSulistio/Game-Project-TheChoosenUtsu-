@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour {
 
     public float speed;
-    public float lifetime;
+    //public float lifetime;
 
     public GameObject destroyEffect;
     

@@ -5419,7 +5419,7 @@ Prefab:
     - target: {fileID: 114542831688609714, guid: 404a8ea8c48a58444a4e616b34d75b32,
         type: 2}
       propertyPath: speed
-      value: -5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 58972219457951200, guid: 404a8ea8c48a58444a4e616b34d75b32,
         type: 2}
@@ -5563,7 +5563,6 @@ MonoBehaviour:
   - {fileID: 1141260404782896, guid: 9db1a7e335efed54ba8dbbca78d2a536, type: 2}
   - {fileID: 1141260404782896, guid: 9db1a7e335efed54ba8dbbca78d2a536, type: 2}
   - {fileID: 1141260404782896, guid: 9db1a7e335efed54ba8dbbca78d2a536, type: 2}
-  shotpoint: {fileID: 311214252}
   startTimeBtwShots: 1
 --- !u!1 &1416420454
 GameObject:

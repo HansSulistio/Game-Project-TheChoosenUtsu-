@@ -4,26 +4,62 @@ using UnityEngine;
 
 public class AngleForward : MonoBehaviour {
 
-    // Use this for initialization
-    public float angle = 0f;
-    public float speed = 5f;
-    
+    #region private variable
+    private float radian = 0f;
+    private float speed = 1f;
+    private float velocityX = 1f;
+    private float velocityY = 1f;
+    #endregion
 
-    
-
-    public static Vector2 RadianToVector2(float radian)
+    #region custom function
+    public void setRadian(float radian)
     {
-        return new Vector2(Mathf.Cos(radian), Mathf.Sin(radian));
+        this.radian = radian;
     }
 
-    public static Vector2 DegreeToVector2(float degree)
+    public void setSpeed(float speed)
     {
-        return RadianToVector2(degree * Mathf.Deg2Rad);
+        this.speed = speed;
     }
 
+    public void setPos(Vector3 position)
+    {
+        transform.position = position;
+    }
+
+    public float getDegree()
+    {
+        return radian * (Mathf.PI / 180);
+    }
+    public void setVelocity()
+    {
+        velocityX = Mathf.Cos(getDegree()) * speed; //Mathf menerima value berupa degree, sehinga harus di convert dulu radian menjadi degree
+        velocityY = Mathf.Sin(getDegree()) * speed;
+    }
+    
+    private Vector2 getUpdatePos()
+    {
+        Vector2 pos = transform.position;
+        pos.x += velocityX * Time.deltaTime;
+        pos.y += velocityY * Time.deltaTime;
+
+        return pos;
+    }
+
+    private void moveObject()
+    {
+        transform.position = getUpdatePos();
+    }
+    #endregion
+
+    #region original function
+    private void Start()
+    {
+        setVelocity();
+    }
     private void Update()
     {
-        transform.Translate(DegreeToVector2(angle) *speed * Time.deltaTime);
-        
+        moveObject();
     }
+    #endregion
 }

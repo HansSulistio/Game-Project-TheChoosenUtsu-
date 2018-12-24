@@ -52,9 +52,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28bf99bcad11a4a448519495aa97b901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 1
   destroyEffect: {fileID: 1872958538825448, guid: 4d4e81bbbeb5a654b8148d45f4cd20d4,
     type: 2}
+  angle: 0
 --- !u!212 &212610362381280890
 SpriteRenderer:
   m_ObjectHideFlags: 1

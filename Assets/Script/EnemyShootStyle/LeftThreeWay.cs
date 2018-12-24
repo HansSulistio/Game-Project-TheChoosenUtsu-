@@ -5,26 +5,36 @@ using UnityEngine;
 public class LeftThreeWay : MonoBehaviour {
 
     public GameObject[] a;
-    public Transform shotpoint;
-   
-    private float timeBtwShots;
     public float startTimeBtwShots;
+
+    private float[] angles = new float[] {195f,180f,165f};
+    private float timeBtwShots;
   
-    // Use this for initialization
-    void Start () {
-        
+    private void initiateBulletShot()
+    {
+        for (int i = 0; i < a.Length; i++)
+        {
+            GameObject bullet = Instantiate(a[i], gameObject.transform);
+            AngleForward bulletaf = bullet.GetComponent<AngleForward>();
+
+            if (bulletaf != null)
+            {
+                bulletaf.setPos(gameObject.transform.position);
+                bulletaf.setRadian(angles[i % angles.Length]);
+                bulletaf.setSpeed(10f);
+            }
+        }
     }
-	
-	// Update is called once per frame
+
+    void Start () {
+        timeBtwShots = startTimeBtwShots;
+    }
+
 	void Update () {
         if (timeBtwShots <= 0)
         {
-            for (int i = 0; i < 3; i++)
-            {
-                Instantiate(a[i],shotpoint.transform);
-            }
+            initiateBulletShot();
             timeBtwShots = startTimeBtwShots;
-            
         }
         else
         {

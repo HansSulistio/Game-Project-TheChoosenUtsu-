@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class EnemyBulletMoveLeft : MonoBehaviour {
 
-    public float speed;
+    public float speed = 0.1f;
     public GameObject destroyEffect;
-
+    public float angle;
     // Use this for initialization
     private void Update()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        Vector3 v3 = transform.position;
+        v3.x += Time.deltaTime * speed;
+        transform.position = v3;
     }
 
     public void DestroyBullet()

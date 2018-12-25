@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212749738498577312}
   - component: {fileID: 114542831688609714}
   - component: {fileID: 58972219457951200}
+  - component: {fileID: 114974243064006720}
   m_Layer: 0
   m_Name: 'minion-triangle '
   m_TagString: Untagged
@@ -98,7 +99,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbdcb62083994c44900ba5a2a3f0287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: -5
+--- !u!114 &114974243064006720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1750162358809218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda41b378bbf9124787172ba15910cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyBullet: {fileID: 1630529652832644, guid: b313d2e0d01d22a4495a885d04c678e9,
+    type: 2}
+  EnemyBulletEx:
+  - {fileID: 1141260404782896, guid: 9db1a7e335efed54ba8dbbca78d2a536, type: 2}
+  - {fileID: 1141260404782896, guid: 9db1a7e335efed54ba8dbbca78d2a536, type: 2}
+  - {fileID: 1141260404782896, guid: 9db1a7e335efed54ba8dbbca78d2a536, type: 2}
 --- !u!212 &212259008613497754
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBulletMoveLeft : MonoBehaviour {
+public class MoveLeft : MonoBehaviour {
 
     public float speed = 0.1f;
     public GameObject destroyEffect;

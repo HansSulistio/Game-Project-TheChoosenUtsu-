@@ -14,7 +14,7 @@ public class LeftThreeWay : MonoBehaviour {
     {
         for (int i = 0; i < a.Length; i++)
         {
-            GameObject bullet = Instantiate(a[i], gameObject.transform);
+            GameObject bullet = Instantiate(a[i]);
             AngleForward bulletaf = bullet.GetComponent<AngleForward>();
 
             if (bulletaf != null)

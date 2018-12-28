@@ -5,6 +5,7 @@ using UnityEngine;
 public class AimOne : MonoBehaviour {
 
     public GameObject EnemyBullet;
+    public Transform shotpoint;
 
 	// Use this for initialization
 	void Start () {
@@ -22,9 +23,9 @@ public class AimOne : MonoBehaviour {
 
         if (player != null)
         {
-            GameObject bullet = Instantiate(EnemyBullet);
+            GameObject bullet = Instantiate(EnemyBullet,shotpoint.position,transform.rotation);
 
-            bullet.transform.position = transform.position;
+            
 
             Vector2 direction = player.transform.position - bullet.transform.position;
 

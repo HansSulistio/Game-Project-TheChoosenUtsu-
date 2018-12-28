@@ -27,6 +27,15 @@ public class RippleProcessor : MonoBehaviour {
         this.RippleMaterial.SetFloat("_CenterY", pos.y);
     }
 
+    public void BossRippleEffect()
+    {
+        this.Amount = 100f;
+        this.Amount *= 1f;
+        Vector3 pos = Input.mousePosition;
+        this.RippleMaterial.SetFloat("_CenterX", pos.x);
+        this.RippleMaterial.SetFloat("_CenterY", pos.y);
+    }
+
     void OnRenderImage(RenderTexture src, RenderTexture dst)
     {
         Graphics.Blit(src, dst, this.RippleMaterial);

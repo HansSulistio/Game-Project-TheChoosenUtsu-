@@ -109,8 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c42e64861631154384c73db8492ad75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  lifetime: 0.9
+  speed: 20
   destroyEffect: {fileID: 1872958538825448, guid: 4d4e81bbbeb5a654b8148d45f4cd20d4,
     type: 2}
 --- !u!212 &212866962565216646

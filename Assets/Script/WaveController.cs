@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WaveController : MonoBehaviour {
 
+    
+
     [System.Serializable]
     public class WaveEnemy
     {
@@ -31,9 +33,9 @@ public class WaveController : MonoBehaviour {
 	void Update () {
         time += Time.deltaTime;
 
-        foreach(Wave wave in waves)
+        foreach (Wave wave in waves)
         {
-            if(wave.time <= time && !wave.isOut )
+            if (wave.time <= time && !wave.isOut)
             {
                 wave.isOut = true;
                 spawnWave(wave);
@@ -43,10 +45,11 @@ public class WaveController : MonoBehaviour {
 
     public void spawnWave(Wave wave)
     {
+        
         foreach (WaveEnemy waveenemy in wave.waveenemys)
         {
             GameObject enemy = Instantiate(waveenemy.go);
-            enemy.transform.position = new Vector2(waveenemy.x,waveenemy.y);
+            enemy.transform.position = new Vector2(waveenemy.x + transform.position.x, waveenemy.y + transform.position.y);
         }
     }
 }

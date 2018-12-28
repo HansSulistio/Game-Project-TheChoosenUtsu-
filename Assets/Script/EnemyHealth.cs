@@ -6,12 +6,15 @@ public class EnemyHealth : MonoBehaviour {
 
     public int health;
     public GameObject deadEffect;
+
     private RippleProcessor camRipple;
+    private bool isBoss = false;
 
 
     // Use this for initialization
     void Start() {
         camRipple = Camera.main.GetComponent<RippleProcessor>();
+        if (health >= 50) isBoss = true;
     }
 
     // Update is called once per frame
@@ -26,10 +29,15 @@ public class EnemyHealth : MonoBehaviour {
 
     public bool isHealthLessThanZero()
     {
+
         if (health <= 0)
         {
-            Instantiate(deadEffect,transform.position,Quaternion.identity);
-            camRipple.RippleEffect();
+            Instantiate(deadEffect, transform.position, Quaternion.identity);
+            if (!isBoss)
+                camRipple.RippleEffect();
+            else
+                camRipple.BossRippleEffect();
+            
             return true;
         }
         

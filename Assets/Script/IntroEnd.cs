@@ -13,8 +13,8 @@ public class IntroEnd : MonoBehaviour {
 	
     IEnumerator JumpToScene()
     {
-        yield return new WaitForSeconds(8.0f);
-        SceneManager.LoadScene("Stage 1");
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadScene("StageOne");
     }
 
 	// Update is called once per frame
